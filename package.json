@@ -1,5 +1,5 @@
 {
-  "name": "@glynnbird/csvtojsonl",
+  "name": "csvtojsonlines",
   "version": "1.0.0",
   "description": "Parse csv data into jsonl (one JSON object per line)",
   "main": "index.js",
@@ -21,6 +21,7 @@
     "csv-parse": "^5.5.6"
   },
   "bin": {
-    "csvtojsonl": "bin/csvtojsonl.bin.js"
+    "csvtojsonlines": "bin/csvtojsonlines.bin.js",
+    "csvtojsonl": "bin/csvtojsonlines.bin.js"
   }
 }
