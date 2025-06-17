@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-const { parseArgs } = require('node:util')
-const csvtojsonlines = require('../index.js')
+import  { parseArgs } from 'node:util'
+import { csvtojsonl } from '../index.js'
+
 const syntax =
 `Syntax:
 --delimiter/-d           The CSV delimiter                     (default: <tab>)
@@ -29,6 +30,6 @@ if (values.help) {
 }
 
 const main = async () => {
-  await csvtojsonlines(values)
+  await csvtojsonl(values)
 }
 main()

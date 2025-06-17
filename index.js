@@ -1,6 +1,7 @@
-const { pipeline } = require('node:stream/promises')
-const { Transform } = require('node:stream')
-const { parse } = require('csv-parse')
+import  { pipeline } from 'node:stream/promises'
+import  { Transform } from 'node:stream'
+import { parse } from 'csv-parse'
+
 
 // convert object to string
 const toString = new Transform({
@@ -11,7 +12,7 @@ const toString = new Transform({
 })
 
 // stream 
-const csvtojsonl = async (opts) => {
+export async function csvtojsonl(opts) {
   // options
   opts.delimiter = opts.delimiter || '\t'
 
@@ -40,4 +41,3 @@ const csvtojsonl = async (opts) => {
   )
 }
 
-module.exports = csvtojsonl
